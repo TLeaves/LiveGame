@@ -1,0 +1,131 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+    
+    <com.ljh.livegame.GameSurfaceView 
+        android:id="@+id/game_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+	
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+    	
+        <TextView 
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="3"
+            android:text="@string/burn_bar_string"/>
+        
+        <TextView 
+           	android:id="@+id/burn_text"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"/>
+        
+        <SeekBar
+	       android:id="@+id/burn_bar"
+	       android:layout_width="0dp"
+	       android:layout_height="fill_parent"
+	       android:layout_weight="6"
+	       android:max="8"
+	       android:progress="3" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+    	
+        <TextView 
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="3"
+            android:text="@string/live_bar_string"/>
+        
+        <TextView 
+            android:id="@+id/live_text"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"/>
+        
+        <SeekBar
+	       android:id="@+id/live_bar"
+	       android:layout_width="0dp"
+	       android:layout_height="fill_parent"
+	       android:layout_weight="6"
+	       android:max="8"
+	       android:progress="2" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+    	
+        <TextView 
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="3"
+            android:text="@string/multiply_rate"/>
+        
+        <TextView 
+            android:id="@+id/multiply_rate_text"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"/>
+        
+        <SeekBar
+	       android:id="@+id/multiply_rate_bar"
+	       android:layout_width="0dp"
+	       android:layout_height="fill_parent"
+	       android:layout_weight="6"
+	       android:max="99"
+	       android:progress="0" />
+    </LinearLayout>
+    
+    <TextView
+        android:id="@+id/multiply_generation_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="" />
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+    	
+        <Button 
+	        android:id="@+id/random_button"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:layout_weight="1"
+	        android:onClick="onRandomMap"
+	        android:text="@string/random_map"/>
+        
+        <Button 
+	        android:id="@+id/clear_button"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:layout_weight="1"
+	        android:onClick="onClearMap"
+	        android:text="@string/clear_map"/>
+    </LinearLayout>
+    
+    <Button 
+        android:id="@+id/start_button"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:onClick="onStart"
+        android:text="@string/start_game"/>
+
+</LinearLayout>
